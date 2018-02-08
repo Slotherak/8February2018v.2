@@ -52,6 +52,9 @@
 	public void setTime(long elapseTime)
 	{
 		long totalSeconds = elapseTime / 1000;
+		this.second = (int)totalSeconds % 60;
+		this.minute = (int)(totalSeconds / 60) % 60;
+		this.hour = (int)(totalSeconds / 3600) % 24;
 	}
 	
 	
